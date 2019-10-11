@@ -8,3 +8,7 @@ Implémentez les 2 méthodes suivantes dans  ProductController.java  :
   *trierProduitsParOrdreAlphabetique  qui retournera la liste de tous les produits triés par nom croissant 
 
 Ensuite, ajoutez à la méthode  ajouterProduit  une condition afin de vérifier que le prix de vente n’est pas égal à 0. 
+
+## Lien du répertoire Git : 
+
+https://github.com/SitJessy/Mcommerce-partie1
