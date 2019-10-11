@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "7151380a-d4bd-4143-b1f8-ac2c206407b2",
+		"name": "MicroServ_OP",
+		"description": "Ensemble des tests pour le cours sur les Microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9090/AdminProduits",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/AdminProduits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"AdminProduits"
+					]
+				},
+				"description": "Récupérez la marge de chaque prouit"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/ProduitOrder",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/ProduitOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"ProduitOrder"
+					]
+				},
+				"description": "Liste des produits triés par Nom Croissant"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/Produits",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 4,\r\n  \"nom\": \"Poney\",\r\n  \"prix\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/Produits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Produits"
+					]
+				},
+				"description": "Test de gestion de l'erreur"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
