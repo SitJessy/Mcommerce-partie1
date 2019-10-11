@@ -17,7 +17,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import javax.validation.Valid;
 import java.net.URI;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 
@@ -119,6 +118,14 @@ public class ProductController {
     	
     }
     
+    @GetMapping(value = "/ProduitOrder")
+    public List<Product> trierProduitsParOrdreAlphabetique() {
+    	
+    	List <Product> produits = productDao.findAllByOrderByNomAsc();
+    	
+    	return produits;
+    	
+    }
 
 
 
