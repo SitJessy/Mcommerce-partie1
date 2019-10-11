@@ -16,6 +16,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.net.URI;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 
@@ -102,6 +104,21 @@ public class ProductController {
 
         return productDao.chercherUnProduitCher(400);
     }
+    
+    // Renvoie la marge pour chaque produit
+    @GetMapping(value = "/AdminProduits")
+    public List<String> calculerMargeProduit() {
+    	
+    	List<String> productMarge= new ArrayList<String>();
+    	List<Product> produits = productDao.findAll();
+    	for (Product produit: produits) {
+    		Integer marge = produit.getPrix() - produit.getPrixAchat();
+    		productMarge.add(produit.toString() + ":" + marge.toString());
+    	}
+    	return productMarge ;
+    	
+    }
+    
 
 
 
